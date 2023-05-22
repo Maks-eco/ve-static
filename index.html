@@ -1,22 +1,42 @@
 <html>
-<head>
-  <style type="text/css"></style>
-</head>
-<body>
-  <button onclick="imageToCanvas()">Proc elem</button><br>
-  <div>
-    <input type="checkbox" id="sideCheck" name="sideCheck" checked hidden>
-    <label for="sideCheck">Front side processing</label>
-  </div>
-  <div id="videoContainer" hidden>
-    <video width="300" height="300" controls autoplay id="videoWindow">
-      <source type="video/mp4" id="videoSource">
-    Your browser does not support the video tag.
-    </video>
-  </div>
-  <input type="file" id="file" accept=".jpg, .jpeg, .png, .bmp">
-  <img src="/ve-static/assets/test.jpg" id="constImg" hidden>
-  <script src="/ve-static/assets/h264-mp4-encoder.web.js"></script>
-  <script type="module" src="/ve-static/assets/main.mjs"></script>
-</body>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/ve-static/assets/styles.css" />
+  </head>
+  <body>
+    <div class="process-container">
+      <p id="process-info"></p>
+    </div>
+    <div class="window">
+      <div id="videoContainer" hidden>
+        <video width="300" height="300" controls autoplay id="videoWindow">
+          <source type="video/mp4" id="videoSource" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- <button onclick="imageToCanvas">Proc elem</button><br /> -->
+    <div>
+      <input type="checkbox" id="sideCheck" name="sideCheck" checked hidden />
+      <!-- <label for="sideCheck">Front side processing</label> -->
+    </div>
+    <div class="button-menu">
+      <button id="start" class="button-file">Default image</button><br />
+      <label for="file" class="button-file">Select Image</label>
+      <input
+        type="file"
+        id="file"
+        accept=".jpg, .jpeg, .png, .bmp"
+        style="visibility: hidden"
+      />
+    </div>
+    <img src="/ve-static/assets/star.png" id="constImg" hidden />
+    <!-- <img src="/test.jpg" id="constImg" hidden /> -->
+    <script src="/ve-static/assets/h264-mp4-encoder.web.js"></script>
+    <script type="module" src="/ve-static/assets/main.mjs"></script>
+  </body>
 </html>

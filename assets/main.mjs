@@ -95,7 +95,6 @@ async function imageToCanvas(input) {
   return new Promise((res) => {
     // console.log(input);
     // document.getElementById("process-info").innerText = "info";
-    // infoGenerationProcess("tfsvuicabof29f983");
 
     infoGenerationProcess("Генерация массива canvas кадров...");
     let context;
@@ -141,8 +140,6 @@ async function imageToCanvas(input) {
 }
 
 function fileToImage(input) {
-  // document.getElementById("process-info").innerText = "sfnsnfdgs";
-  // console.log("sfnsnfdgs");
   const reader = new FileReader();
   reader.addEventListener(
     "load",
@@ -163,8 +160,7 @@ function updateImageDisplay() {
 }
 
 inputFile.addEventListener("change", () => {
-  // infoGenerationProcess("Генерация массива canvas кадров...");
-  // this.getElementById("process-info").innerText = "zdgs";
+  infoGenerationProcess("Генерация массива canvas кадров...");
   // console.log(this);
   updateImageDisplay();
 });
@@ -188,45 +184,17 @@ function initStorage() {
 // window.imageToCanvas = imageToCanvas;
 // window.infoGenerationProcess = infoGenerationProcess;
 
-// document.getElementById("process-info").innerText = "zdgs";
-
 const buttonStart = document.getElementById("start");
 
-// const somefng = new Promise((res) => {
-//   // res();
-// imageToCanvas().then((mes) => console.log(mes));
-// });
+buttonStart.addEventListener("mousedown", () => {
+  // document.getElementById("process-info").innerText = "start";
+  infoGenerationProcess("Генерация массива canvas кадров...");
+});
 
-// const event = new Event("build");
-// const elem = document.getElementById("process-info");
-// // Listen for the event.
-// elem.addEventListener(
-//   "build",
-//   (e) => {
-//     /* … */
-//     console.log(event);
-//   },
-//   false
-// );
-// imageToCanvas().then((mes) => console.log(mes));
-
-// Dispatch the event.
-// elem.dispatchEvent(event);
-
-buttonStart.addEventListener(
-  "click",
-  /* imageToCanvas */ (e) => {
-    infoGenerationProcess("Генерация массива canvas кадров...");
-    // console.log(document, "some", e, this);
-    // e.target.innerText = "start";
-    // document.getElementById("process-info").innerText = "start";
-    // imageToCanvas().then((mes) => console.log(mes));
-    // elem.dispatchEvent(event);
-    imageToCanvas().then(/* (mes) => console.log(mes) */);
-
-    // e.target.innerText = "done";
-  }
-);
+buttonStart.addEventListener("click", (e) => {
+  // infoGenerationProcess("Генерация массива canvas кадров...");
+  imageToCanvas().then(/* (mes) => console.log(mes) */);
+});
 
 window.onload = () => {
   initStorage();

@@ -1,11 +1,51 @@
 body {
   /* background-color: aquamarine; */
+  margin: 0px;
 }
+.module-border-wrap {
+  /* max-width: 250px; */
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(
+    to right,
+    rgb(0, 195, 255),
+    rgb(0, 47, 255),
+    rgb(64, 28, 246)
+  );
+  padding: 10px;
+  border-radius: 15px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.module {
+  background: #ffffff;
+  color: white;
+  padding: 0.5rem;
+  width: 470px;
+  height: 470px;
+  border-radius: 10px;
+}
+.star-img {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: url("background_star.svg") no-repeat center center;
+  background-size: contain;
+  left: 398px;
+  bottom: -66px;
+  /* opacity: 0.8; */
+}
+
 .process-container {
   display: flex;
   align-items: flex-end;
   font-family: "Open Sans";
-  height: 50px;
+  height: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 300px;
@@ -15,54 +55,21 @@ body {
   color: #0091fc;
 }
 
-.window {
-  background: url("window.png") no-repeat center center;
-  background-size: contain;
-  height: 450px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* .controls {
-  width: 100%;
-  height: 18.0971659919028340080971659919028%; 
-  position: relative;
-  background-color: aquamarine;
-} */
 .button-file {
   /* border-style: none; */
   background-color: white;
   font-size: 20px;
-  color: blueviolet;
+  color: rgb(64, 28, 246) /* blueviolet */;
 
   padding: 10px;
-  border: solid blueviolet 2px;
-  /* border-width: 2px; */
+  border: solid rgb(64, 28, 246) /* blueviolet */ 2px;
   border-radius: 10px;
   font-family: "Open Sans";
-  /* 
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Open Sans Light"), local("OpenSans-Light"),
-    url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTa-j2U0lmluP9RWlSytm3ho.woff2)
-      format("woff2");
-  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F; */
+  &:hover {
+    border: solid rgb(0, 195, 255) /* blueviolet */ 2px;
+    transition: all 0.3s ease;
+  }
 }
-
-/* @font-face {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Open Sans Light"), local("OpenSans-Light"),
-    url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTa-j2U0lmluP9RWlSytm3ho.woff2)
-      format("woff2");
-  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F; 
-}*/
 
 .button-menu {
   display: flex;
@@ -74,9 +81,16 @@ body {
   width: 300px;
 }
 
+#file {
+  visibility: hidden;
+  height: 0px;
+}
 #videoWindow {
   margin-left: auto;
+  padding-bottom: 20px;
 }
 #videoContainer {
   /* width: fit-content; */
+  width: 470px;
+  height: 470px;
 }

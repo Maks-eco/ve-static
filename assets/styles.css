@@ -64,7 +64,7 @@ body {
   padding: 10px;
   border: solid rgb(64, 28, 246) /* blueviolet */ 2px;
   border-radius: 10px;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Tahoma, sans-serif;
   &:hover {
     border: solid rgb(0, 195, 255) /* blueviolet */ 2px;
     transition: all 0.3s ease;
